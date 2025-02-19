@@ -1,35 +1,33 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-function Results({
-  books,
-  loading,
-  currentPage,
-  totalPages,
-  onPageChange,
-}) {
-  // Render books
+function Results({ books, loading, currentPage, totalPages, onPageChange }) {
   const renderBooks = () => {
     if (loading) {
-      return <p>Loading...</p>; // Display loading text if still fetching
+      return <p>Loading...</p>;
     }
 
-    if (books.length === 0) {
-      return <p>No books found.</p>; // If no books match the search
+    if (!books || books.length === 0) {
+      return <p>No books found.</p>;
     }
 
     return (
       <div>
-        {books.map((book) => (
-          <div key={book.id}>
-            <h3>{book.volumeInfo.title}</h3>
-            <p>{book.volumeInfo.authors?.join(", ")}</p>
-            <p>{book.volumeInfo.publishedDate}</p>
-          </div>
-        ))}
-      </div>
+      {books.map((item, index) => {
+        const bookId = item.id;
+        const imageSrc = item?.volumeInfo?.imageLinks?.thumbnail || "https://via.placeholder.com/128x192?text=No+Image";
+        const title = item?.volumeInfo?.title || "No title available";
+
+        return (
+          <Link to={`/book/${bookId}`} key={index} className="book-item">
+            <img src={imageSrc} alt={title} />
+            <p>{title}</p>
+          </Link>
+        );
+      })}
+    </div>
     );
   };
-
 
   const renderPagination = () => {
     if (totalPages <= 1) return null;

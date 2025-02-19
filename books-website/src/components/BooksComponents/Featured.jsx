@@ -8,16 +8,22 @@ function Featured() {
   useEffect(() => {
     async function fetchBooks() {
       try {
+        const categories = ["fiction", "history", "science", "mystery", "fantasy", "biography"];
+        const randomCategory = categories[Math.floor(Math.random() * categories.length)];
+        const randomLetter = String.fromCharCode(97 + Math.floor(Math.random() * 26));
+        const randomStartIndex = Math.floor(Math.random() * 100);
+
         const res = await fetch(
-          `https://www.googleapis.com/books/v1/volumes?q=random&maxResults=20&key=AIzaSyANxldAk-BTUIogU74u5pP-trF3LqQC1XA`
+          `https://www.googleapis.com/books/v1/volumes?q=${randomLetter}+subject:${randomCategory}&startIndex=${randomStartIndex}&maxResults=20&key=AIzaSyANxldAk-BTUIogU74u5pP-trF3LqQC1XA`
         );
+
 
         if (!res.ok) {
           throw new Error(`HTTP error! status: ${res.status}`);
         }
 
         const data = await res.json();
-   
+
 
         setBooks(data.items || []);
       } catch (error) {
