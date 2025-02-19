@@ -1,13 +1,13 @@
 import Categories from "../components/Categories";
 import FetchQuotes from "../utils/FetchQuotes";
-import Featured from "../components/Featured";
+import Books from "../components/Books";
 
 function Home() {
   return (
     <>
     <FetchQuotes/>
     <Categories/>
-    <Featured/>
+    <Books/>
     </>
   )
 
