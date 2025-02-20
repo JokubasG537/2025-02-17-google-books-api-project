@@ -10,7 +10,6 @@ function Home() {
     <FetchQuotes/>
     <Categories/>
     <Books/>
-    <Footer/>
     </>
   )
 

@@ -1,5 +1,22 @@
 {
   "dependencies": {
+    "@tailwindcss/vite": "^4.0.7",
     "react-router-dom": "^7.1.5"
-  }
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.7",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17"
+  },
+  "name": "2025-02-17-google-books-api-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }

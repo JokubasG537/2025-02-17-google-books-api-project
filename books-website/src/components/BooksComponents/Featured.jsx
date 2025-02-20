@@ -48,7 +48,7 @@ function Featured() {
   }
 
   return (
-    <div>
+    <div className="bg-blue-500 text-white py-2 px-4 rounded flex ">
       {books.map((item, index) => {
         const bookId = item.id;
         const imageSrc = item?.volumeInfo?.imageLinks?.thumbnail || "https://via.placeholder.com/128x192?text=No+Image";

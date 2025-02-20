@@ -22,6 +22,7 @@ function Results({ books, loading, currentPage, totalPages, onPageChange }) {
           <Link to={`/book/${bookId}`} key={index} className="book-item">
             <img src={imageSrc} alt={title} />
             <p>{title}</p>
+            
           </Link>
         );
       })}

@@ -30,7 +30,7 @@ function FetchQuotes() {
   }
 
   return (
-    <div className="quotes-wrapper">
+    <div className="bg-blue-500 text-white text-xl p-4">
       {quotes.map((item, index) => {
         return (
           <div key={index} className="quote-wrapper">
