@@ -1,7 +1,9 @@
 {
   "dependencies": {
     "@tailwindcss/vite": "^4.0.7",
-    "react-router-dom": "^7.1.5"
+    "react-router-dom": "^7.1.5",
+    "sass": "^1.85.0",
+    "swiper": "^11.2.4"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.0.7",

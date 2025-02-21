@@ -1,0 +1,27 @@
+.quote-wrapper {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 95%;
+  flex-direction: column;
+  margin: auto;
+
+  h2 {
+    background-color: transparent;
+    color: white;
+    padding: 10%;
+  }
+
+  span {
+    color: white;
+  }
+
+   :first-child {
+    background: linear-gradient(135deg, #d30026, #7a0015);
+   }
+
+
+
+}

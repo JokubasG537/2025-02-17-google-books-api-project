@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './QuotesStyle.scss';
 
 function FetchQuotes() {
   const [quotes, setQuotes] = useState([]);
@@ -8,9 +9,9 @@ function FetchQuotes() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const res = await fetch('https://quoteslate.vercel.app/api/quotes/random?count=3');
+        const res = await fetch('https://quoteslate.vercel.app/api/quotes/random?count=1');
         const data = await res.json();
-        setQuotes(data);
+        setQuotes(Array.isArray(data) ? data : [data]);
         setLoading(false);
       } catch (error) {
         setError(error.message);
@@ -30,21 +31,15 @@ function FetchQuotes() {
   }
 
   return (
-    <div className="bg-blue-500 text-white text-xl p-4">
-      {quotes.map((item, index) => {
-        return (
-          <div key={index} className="quote-wrapper">
-            <h2>{item.quote}</h2>
-            <span className="author">
-              {item.author === 'Unknown' ? (
-                <span>Unknown author</span>
-              ) : (
-                <span>{item.author}</span>
-              )}
-            </span>
-          </div>
-        );
-      })}
+    <div className="quote-wrapper">
+      {quotes.map((item, index) => (
+        <div key={index} className="quote-wrapper">
+          <h2>{item.quote}</h2>
+          <span className="author">
+            {item.author === 'Unknown' ? 'Unknown author' : item.author}
+          </span>
+        </div>
+      ))}
     </div>
   );
 }
