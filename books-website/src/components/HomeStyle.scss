@@ -1,0 +1,16 @@
+
+.home-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+
+.swiper-pagination-bullet {
+  background: gray;
+  opacity: 0.6;
+}
+
+.swiper-pagination-bullet-active {
+  background: black !important;
+  opacity: 1;
+}

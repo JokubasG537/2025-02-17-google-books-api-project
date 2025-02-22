@@ -31,7 +31,7 @@ function FetchQuotes() {
   }
 
   return (
-    <div className="quote-wrapper">
+    <div className="quote-wrapper-card">
       {quotes.map((item, index) => (
         <div key={index} className="quote-wrapper">
           <h2>{item.quote}</h2>

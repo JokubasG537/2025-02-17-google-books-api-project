@@ -1,27 +1,58 @@
-.quote-wrapper {
-  min-height: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: 95%;
-  flex-direction: column;
-  margin: auto;
 
-  h2 {
-    background-color: transparent;
-    color: white;
-    padding: 10%;
+  .quote-wrapper-card {
+    min-height: 80vh;
+    width: 95%;
+    background: linear-gradient(135deg, #d30026,
+    #7a0015);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
   }
 
-  span {
-    color: white;
+  .quote-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+
+
+
+    h2 {
+      background-color: transparent;
+      color: white;
+      padding-left: 10%;
+      padding-right: 10%;
+      padding-bottom: 10%;
+      text-align: center;
+      position: relative;
+      display: inline-block;
+
+      &::before {
+        content: "“"; // Left quotation mark
+        font-size: 1.5em; // Adjust size as needed
+        font-weight: bold;
+        color: black; // Change color if needed
+        margin-right: 5px;
+      }
+
+      &::after {
+        content: "”"; // Right quotation mark
+        font-size: 1.5em;
+        font-weight: bold;
+        color: black;
+        margin-left: 5px;
+      }
+    }
+
+
+    span {
+      color: white;
+      display: flex;
+      padding-bottom: 50px;
+      font-size: 2rem;
+
+    }
+
   }
-
-   :first-child {
-    background: linear-gradient(135deg, #d30026, #7a0015);
-   }
-
-
-
-}

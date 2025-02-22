@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import Featured from "./BooksComponents/Featured";
 import Results from "./BooksComponents/Results";
+import './BooksStyle.scss'
 
 const PAGE_SIZE = 20;
 
@@ -45,8 +46,11 @@ function Books() {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSearch}>
+    <div className="books-section">
+
+
+      <form id="search-form" onSubmit={handleSearch}>
+      <div className="form-wrapper">
         <input
           type="text"
           value={searchQuery}
@@ -59,6 +63,8 @@ function Books() {
             Clear
           </button>
         )}
+
+    </div>
       </form>
 
       {!searchQuery ? (

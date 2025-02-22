@@ -12,7 +12,7 @@ function Results({ books, loading, currentPage, totalPages, onPageChange }) {
     }
 
     return (
-      <div>
+      <div className="result-books-wrapper">
       {books.map((item, index) => {
         const bookId = item.id;
         const imageSrc = item?.volumeInfo?.imageLinks?.thumbnail || "https://via.placeholder.com/128x192?text=No+Image";
@@ -22,7 +22,7 @@ function Results({ books, loading, currentPage, totalPages, onPageChange }) {
           <Link to={`/book/${bookId}`} key={index} className="book-item">
             <img src={imageSrc} alt={title} />
             <p>{title}</p>
-            
+
           </Link>
         );
       })}
