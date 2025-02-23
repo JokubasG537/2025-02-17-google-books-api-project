@@ -1,5 +1,6 @@
 .books-section {
   background: linear-gradient(135deg, #f0f0f0, #dcdcdc);
+  padding-bottom: 80px;
 
 }
 
@@ -32,16 +33,18 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between; // Ensures proper spacing
+  justify-content: flex-start;
   max-width: 1200px;
   padding: 10px;
   margin: auto;
   gap: 50px;
 
+
+
   .book-item {
     display: flex;
     flex-direction: column;
-    width: calc((100% - 100px) / 3); // 3 books per row, accounting for gaps
+    width: calc((100% - 100px) / 3);
     min-height: 100%;
     text-align: center;
     align-items: center;
@@ -51,9 +54,16 @@
     padding-top: 30px;
     background-color: white;
 
+    &:last-child {
+      display: flex;
+      align-self: first baseline;
+    }
+
     p {
       font-weight: bold;
       font-size: 1.1rem;
+      margin-left: 5px;
+      margin-right: 5px;
     }
     img {
       width: 70%;

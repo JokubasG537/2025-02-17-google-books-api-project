@@ -35,7 +35,6 @@ function Home() {
 
       <Categories />
       <Books />
-      <Footer />
     </div>
   );
 }

@@ -1,0 +1,103 @@
+.books-section {
+  background: linear-gradient(135deg, #f0f0f0, #dcdcdc);
+  padding-bottom: 80px;
+}
+
+#search-form {
+  background-color: #c90024;
+  padding: 20px 15px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+  margin-bottom: 70px;
+}
+#search-form input {
+  border: none;
+  border-radius: 6px;
+  padding: 5px 3px;
+}
+#search-form button {
+  border: none;
+  border-radius: 6px;
+  padding: 5px 3px;
+  color: white;
+  background-color: black;
+}
+
+.featured-books-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 1200px;
+  padding: 10px;
+  margin: auto;
+  gap: 50px;
+}
+.featured-books-wrapper .book-item {
+  display: flex;
+  flex-direction: column;
+  width: calc((100% - 100px) / 3);
+  min-height: 100%;
+  text-align: center;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  background-color: white;
+}
+.featured-books-wrapper .book-item:last-child {
+  display: flex;
+  align-self: first baseline;
+}
+.featured-books-wrapper .book-item p {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.featured-books-wrapper .book-item img {
+  width: 70%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 3px;
+  border: 1px solid black;
+}
+
+.result-books-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  padding: 10px;
+  margin: auto;
+  gap: 50px;
+}
+.result-books-wrapper .book-item {
+  display: flex;
+  flex-direction: column;
+  width: calc((100% - 100px) / 3);
+  min-height: 100%;
+  text-align: center;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  background-color: white;
+}
+.result-books-wrapper .book-item p {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.result-books-wrapper .book-item img {
+  width: 70%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 3px;
+  border: 1px solid black;
+}/*# sourceMappingURL=BooksStyle.css.map */

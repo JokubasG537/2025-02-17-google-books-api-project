@@ -1,0 +1,30 @@
+nav {
+  margin: auto;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  padding-left: 7px;
+  padding-right: 12px;
+  max-width: 1200px;
+  margin: auto;
+}
+.nav-wrapper img {
+  width: 60px;
+}
+.nav-wrapper .nav-three-items-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.nav-wrapper .nav-three-items-wrapper a {
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: black;
+}/*# sourceMappingURL=NavStyle.css.map */
