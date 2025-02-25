@@ -1,8 +1,13 @@
+@use "./responsive" as res;
 
 .home-wrapper {
   display: flex;
   flex-direction: column;
   gap: 70px;
+
+  @include res.mobile {
+    gap: 40px;
+  }
 }
 
 .swiper-pagination-bullet {

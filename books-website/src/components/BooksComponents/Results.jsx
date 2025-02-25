@@ -12,6 +12,7 @@ function Results({ books, loading, currentPage, totalPages, onPageChange }) {
     }
 
     return (
+      <>
       <div className="result-books-wrapper">
       {books.map((item, index) => {
         const bookId = item.id;
@@ -27,6 +28,8 @@ function Results({ books, loading, currentPage, totalPages, onPageChange }) {
         );
       })}
     </div>
+      </>
+
     );
   };
 

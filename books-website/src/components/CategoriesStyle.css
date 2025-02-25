@@ -4,6 +4,11 @@ h2 {
   font-size: 3rem;
   margin: auto;
 }
+@media (max-width: 576px) {
+  h2 {
+    font-size: 2rem;
+  }
+}
 
 .categories-wrapper {
   display: flex;

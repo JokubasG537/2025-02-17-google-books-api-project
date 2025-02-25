@@ -1,11 +1,100 @@
-footer {
-  background: linear-gradient(to bottom, #a0001c, #800016, #200005);
-  min-height: 40vh;
-}
+@use "./responsive" as res;
 
-.footer-items-wrapper{
-  max-width: 600px;
+footer {
+  background: linear-gradient(135deg, #d30026,
+  #7a0015);
+  min-height: 40vh;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
+
+  .footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .top-footer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      padding-bottom: 50px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+      .logo-wrapper {
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 70px;
+          margin-right: 10px;
+        }
+
+        span {
+          color: white;
+          font-size: 1.5rem;
+        }
+      }
+
+      .elements-wrapper {
+        display: flex;
+        width: 60%;
+        justify-content: space-around;
+        align-items: flex-start;
+
+        .element-wrapper {
+          display: flex;
+          flex-direction: column;
+
+          .header {
+            color: gray;
+            padding-bottom: 10px;
+          }
+
+          .links-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            a {
+              font-size: 1.2rem;
+              font-weight: bold;
+            }
+          }
+        }
+        @include res.tablet {
+          width: auto;
+          padding-top: 20px;
+        }
+
+        @include res.mobile {
+          flex-direction: column;
+          gap: 20px;
+        }
+      }
+      @include res.tablet {
+        flex-direction: column;
+        max-width: 100%;
+      }
+    }
+
+    .bottom-footer {
+      margin-top: 20px;
+
+      .copyright {
+        color: white;
+        font-size: 0.9rem;
+      }
+    }
+  }
 }

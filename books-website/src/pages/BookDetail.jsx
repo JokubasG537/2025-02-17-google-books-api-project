@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import '../components/BookDetailStyle.scss'
 
 function BookDetail() {
   const { id } = useParams();
@@ -35,7 +36,7 @@ function BookDetail() {
   if (error) return <h1>Error: {error}</h1>;
   if (!book) return <h1>No book found.</h1>;
 
-  // Extract book details
+
   const { volumeInfo } = book;
   const title = volumeInfo?.title || "No title available";
   const authors = volumeInfo?.authors?.join(", ") || "Unknown author";
@@ -48,14 +49,14 @@ function BookDetail() {
     <div className="book-detail">
     <div className="book-header-author">
       <h1>{title}</h1>
-      <p><strong>Authors:</strong> {authors}</p>
+      <p>{authors}</p>
     </div>
 
     <div className="details">
-
+      {thumbnail && <img src={thumbnail} alt={title} />}
+      <div className=""></div>
       <p><strong>Publisher:</strong> {publisher}</p>
       <p><strong>Published Date:</strong> {publishedDate}</p>
-      {thumbnail && <img src={thumbnail} alt={title} />}
     </div>
 
       <p><strong>Description:</strong> {description}</p>

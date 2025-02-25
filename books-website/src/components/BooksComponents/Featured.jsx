@@ -48,6 +48,8 @@ function Featured() {
   }
 
   return (
+    <>
+    <h2>Featured</h2>
     <div className="featured-books-wrapper">
       {books.map((item, index) => {
         const bookId = item.id;
@@ -62,6 +64,7 @@ function Featured() {
         );
       })}
     </div>
+    </>
   );
 }
 

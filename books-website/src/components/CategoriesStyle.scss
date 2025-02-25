@@ -1,3 +1,5 @@
+@use "./responsive" as res;
+
 .categories {
 
 }
@@ -7,6 +9,10 @@ h2 {
   padding-left: 10px;
   font-size: 3rem;
   margin: auto;
+
+  @include res.mobile {
+    font-size: 2rem;
+  }
 }
 
 .categories-wrapper {

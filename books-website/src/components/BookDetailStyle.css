@@ -1,0 +1,30 @@
+.book-detail {
+  min-height: 55vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  gap: 30px;
+}
+
+.book-header-author {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.book-header-author h1 {
+  font-size: 3rem;
+}
+.book-header-author p {
+  font-size: 1.2rem;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}/*# sourceMappingURL=BookDetailStyle.css.map */

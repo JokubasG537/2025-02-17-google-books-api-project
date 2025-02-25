@@ -1,1 +1,1 @@
-{"version":3,"sources":["CategoriesStyle.scss","CategoriesStyle.css"],"names":[],"mappings":"AAIA;EACE,iBAAA;EACA,kBAAA;EACA,eAAA;EACA,YAAA;ACHF;;ADMA;EACE,aAAA;EACA,sBAAA;ACHF;;ADOA;EACE,oBAAA;ACJF;;ADOA;EACE,qBAAA;EACA,YAAA;ACJF","file":"CategoriesStyle.css"}
+{"version":3,"sources":["CategoriesStyle.scss","CategoriesStyle.css","_responsive.scss"],"names":[],"mappings":"AAMA;EACE,iBAAA;EACA,kBAAA;EACA,eAAA;EACA,YAAA;ACLF;ACAE;EFCF;IAOI,eAAA;ECJF;AACF;;ADOA;EACE,aAAA;EACA,sBAAA;ACJF;;ADQA;EACE,oBAAA;ACLF;;ADQA;EACE,qBAAA;EACA,YAAA;ACLF","file":"CategoriesStyle.css"}

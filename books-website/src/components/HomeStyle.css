@@ -3,6 +3,11 @@
   flex-direction: column;
   gap: 70px;
 }
+@media (max-width: 576px) {
+  .home-wrapper {
+    gap: 40px;
+  }
+}
 
 .swiper-pagination-bullet {
   background: gray;

@@ -24,28 +24,37 @@ function Categories() {
     <div className="categories">
       <h2>Categories</h2>
       <Swiper
-        slidesPerView={4.7}
-        spaceBetween={20}
-        loop={true}
-        freeMode={true}
-        autoplay={{
-          delay: 0,
-          disableOnInteraction: false,
-        }}
-        speed={5000}
-        modules={[Autoplay]}
-        className="categories-swiper"
+  slidesPerView={4.7} // Default for large screens
+  spaceBetween={20}
+  loop={true}
+  freeMode={true}
+  autoplay={{
+    delay: 0,
+    disableOnInteraction: false,
+  }}
+  speed={5000}
+  modules={[Autoplay]}
+  className="categories-swiper"
+  breakpoints={{
+    1024: { slidesPerView: 4.7 },
+    768: { slidesPerView: 3 },
+    480: { slidesPerView: 2.1 },
+    320: { slidesPerView: 1.3 },
+  }}
+>
+  {categoriesData.map((category, index) => (
+    <SwiperSlide key={index} className="category-slide">
+      <Link
+        to={`/category/${category.category.toLowerCase().replace(/ & /g, "-").replace(/\s+/g, "-")}`}
+        className="link-container"
+        style={{ backgroundImage: `url(${category.image})` }}
       >
-        {categoriesData.map((category, index) => (
-          <SwiperSlide key={index} className="category-slide">
-            <Link to={`/category/${category.category.toLowerCase().replace(/ & /g, "-").replace(/\s+/g, "-")}`}
-              className="link-container"
-              style={{ backgroundImage: `url(${category.image})` }}>
-              <h3>{category.category}</h3>
-            </Link>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+        <h3>{category.category}</h3>
+      </Link>
+    </SwiperSlide>
+  ))}
+</Swiper>
+
     </div>
   );
 }

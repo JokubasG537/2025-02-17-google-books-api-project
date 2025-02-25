@@ -40,9 +40,19 @@
   color: black;
   margin-left: 5px;
 }
+@media (max-width: 576px) {
+  .quote-wrapper h2 {
+    font-size: 1.5rem;
+  }
+}
 .quote-wrapper span {
   color: white;
   display: flex;
   padding-bottom: 50px;
   font-size: 2rem;
+}
+@media (max-width: 576px) {
+  .quote-wrapper span {
+    font-size: 1.3rem;
+  }
 }/*# sourceMappingURL=QuotesStyle.css.map */

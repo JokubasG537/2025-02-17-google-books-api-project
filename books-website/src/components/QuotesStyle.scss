@@ -1,3 +1,4 @@
+@use "./responsive" as res;
 
   .quote-wrapper-card {
     min-height: 80vh;
@@ -30,19 +31,23 @@
       display: inline-block;
 
       &::before {
-        content: "“"; // Left quotation mark
-        font-size: 1.5em; // Adjust size as needed
+        content: "“";
+        font-size: 1.5em;
         font-weight: bold;
-        color: black; // Change color if needed
+        color: black;
         margin-right: 5px;
       }
 
       &::after {
-        content: "”"; // Right quotation mark
+        content: "”";
         font-size: 1.5em;
         font-weight: bold;
         color: black;
         margin-left: 5px;
+      }
+
+      @include res.mobile {
+        font-size: 1.5rem;
       }
     }
 
@@ -53,6 +58,9 @@
       padding-bottom: 50px;
       font-size: 2rem;
 
+      @include res.mobile {
+        font-size: 1.3rem;
+      }
     }
 
   }
