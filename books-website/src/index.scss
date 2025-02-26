@@ -32,3 +32,32 @@ h2 {
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
 }
+
+.pagination {
+  width: 300px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.custom-button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: rgb(50, 50, 50); // Smoother grayish transition
+  }
+
+  &:active {
+    background-color: rgb(70, 70, 70); // Slightly lighter gray on click
+  }
+}

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Results({ books, loading, currentPage, totalPages, onPageChange }) {
   const renderBooks = () => {
     if (loading) {
-      return <p>Loading...</p>;
+      return <ThreeDot variant="bob" color="#ff2828" size="medium" text="" textColor="" />;
     }
 
     if (!books || books.length === 0) {
@@ -37,15 +37,15 @@ function Results({ books, loading, currentPage, totalPages, onPageChange }) {
     if (totalPages <= 1) return null;
 
     return (
-      <div>
-        <button
+      <div className="pagination">
+        <button className="custom-button"
           onClick={() => onPageChange(currentPage - 1)}
           disabled={currentPage === 1}
         >
           Previous
         </button>
         <span>{`Page ${currentPage} of ${totalPages}`}</span>
-        <button
+        <button className="custom-button"
           onClick={() => onPageChange(currentPage + 1)}
           disabled={currentPage === totalPages}
         >

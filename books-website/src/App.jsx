@@ -7,6 +7,7 @@ import BookDetail from "./pages/BookDetail";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Footer from "./components/footer";
+import { ThreeDot } from "react-loading-indicators";
 
 function App() {
   console.log(`veikia`)

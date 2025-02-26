@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-
+import '../components/CategoryStyle.scss'
 function Category() {
   const { id } = useParams();
   const [category, setCategory] = useState([]);
@@ -48,7 +48,7 @@ function Category() {
 
       {!loading && !error && (
         <>
-          <div className="book-list">
+          <div className="books-list">
             {visibleBooks.map((item) => {
               const bookId = item.id;
               const imageSrc =
@@ -68,14 +68,14 @@ function Category() {
 
           {totalPages > 1 && (
             <div className="pagination">
-              <button
+              <button className="custom-button"
                 onClick={() => setCurrentPage(currentPage - 1)}
                 disabled={currentPage === 1}
               >
                 Previous
               </button>
               <span>{`Page ${currentPage} of ${totalPages}`}</span>
-              <button
+              <button className="custom-button"
                 onClick={() => setCurrentPage(currentPage + 1)}
                 disabled={currentPage === totalPages}
               >

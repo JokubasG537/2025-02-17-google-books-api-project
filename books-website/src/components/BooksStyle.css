@@ -10,24 +10,21 @@
   justify-content: flex-end;
   gap: 5px;
   margin-bottom: 70px;
-
-  input {
-    border: none;
-    border-radius: 6px;
-    padding: 5px 3px;
-  }
-
-  button {
-    border: none;
-    border-radius: 6px;
-    padding: 5px 3px;
-    color: white;
-    background-color: black;
-  }
+}
+#search-form input {
+  border: none;
+  border-radius: 6px;
+  padding: 5px 3px;
+}
+#search-form button {
+  border: none;
+  border-radius: 6px;
+  padding: 5px 3px;
+  color: white;
+  background-color: black;
 }
 
-.featured-books-wrapper,
-.result-books-wrapper {
+.featured-books-wrapper, .result-books-wrapper, .books-list {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
@@ -36,34 +33,38 @@
   padding: 10px;
   margin: auto;
   gap: 50px;
-
-  .book-item {
-    display: flex;
-    flex-direction: column;
-    width: calc(33.333% - 33.333px);
-    min-width: 250px;
-    min-height: 100%;
-    text-align: center;
-    align-items: center;
-    gap: 2rem;
-    position: relative;
-    padding-bottom: 30px;
-    padding-top: 30px;
-    background-color: white;
-
-    p {
-      font-weight: bold;
-      font-size: 1.1rem;
-      margin-left: 5px;
-      margin-right: 5px;
-    }
-
-    img {
-      width: 70%;
-      height: 300px;
-      object-fit: cover;
-      border-radius: 3px;
-      border: 1px solid black;
-    }
-  }
 }
+.featured-books-wrapper .book-item, .result-books-wrapper .book-item, .books-list .book-item {
+  display: flex;
+  flex-direction: column;
+  width: calc(33.333% - 33.333px);
+  min-width: 250px;
+  min-height: 100%;
+  text-align: center;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  background-color: white;
+}
+.featured-books-wrapper .book-item p, .result-books-wrapper .book-item p, .books-list .book-item p {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.featured-books-wrapper .book-item img, .result-books-wrapper .book-item img, .books-list .book-item img {
+  width: 70%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 3px;
+  border: 1px solid black;
+}
+
+.pagination {
+  margin: auto;
+  max-width: 300px;
+  padding: 30px;
+}/*# sourceMappingURL=BooksStyle.css.map */

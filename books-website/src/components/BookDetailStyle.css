@@ -1,30 +1,58 @@
 .book-detail {
   min-height: 55vh;
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #ededed;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.book-detail .book-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.book-detail .book-header h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+.book-detail .book-header .authors {
+  font-size: 1.1rem;
+  color: #777;
+}
+.book-detail .book-main {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  max-width: 1200px;
-  margin: auto;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  gap: 30px;
-}
-
-.book-header-author {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-.book-header-author h1 {
-  font-size: 3rem;
-}
-.book-header-author p {
-  font-size: 1.2rem;
-}
-
-.details {
-  display: flex;
-  align-items: center;
   justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+.book-detail .book-main .book-image {
+  flex: 1;
+}
+.book-detail .book-main .book-image img {
+  border: 1px solid;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.book-detail .book-main .book-info {
+  flex: 2;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+.book-detail .book-main .book-info p {
+  margin-bottom: 15px;
+  color: #333;
+}
+.book-detail .book-main .book-info p strong {
+  color: #d30026;
+}
+.book-detail .book-excerpt blockquote {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #555;
+  border-left: 4px solid #d30026;
+  padding-left: 15px;
+  margin-left: 0;
 }/*# sourceMappingURL=BookDetailStyle.css.map */
