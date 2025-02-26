@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://jokubas123.github.io/google-books-api-project/books-website",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
